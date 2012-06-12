@@ -22,10 +22,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="new.html.erb" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="new.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/surveys/new.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="38" selection-start="441" selection-end="441" vertical-scroll-proportion="0.31654677">
+            <state line="11" column="38" selection-start="441" selection-end="441" vertical-scroll-proportion="-7.586207">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Gemfile" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Gemfile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="18" column="3" selection-start="326" selection-end="326" vertical-scroll-proportion="0.49723756">
               <folding />
             </state>
           </provider>
@@ -68,6 +77,7 @@
         <option value="$PROJECT_DIR$/app/views/surveys/_form.html.erb" />
         <option value="$PROJECT_DIR$/app/views/layouts/application.html.erb" />
         <option value="$PROJECT_DIR$/app/views/surveys/new.html.erb" />
+        <option value="$PROJECT_DIR$/Gemfile" />
       </list>
     </option>
   </component>
@@ -418,7 +428,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1456" height="886" extended-state="7" />
+    <frame x="-8" y="-8" width="1456" height="886" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -523,7 +533,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/surveys/new.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="38" selection-start="441" selection-end="441" vertical-scroll-proportion="0.31654677">
+        <state line="11" column="38" selection-start="441" selection-end="441" vertical-scroll-proportion="-7.586207">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gemfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="3" selection-start="326" selection-end="326" vertical-scroll-proportion="0.49723756">
           <folding />
         </state>
       </provider>
