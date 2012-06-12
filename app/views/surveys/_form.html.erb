@@ -1,0 +1,160 @@
+<%= form_for(@survey) do |f| %>
+  <% if @survey.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@survey.errors.count, "error") %> prohibited this survey from being saved:</h2>
+
+      <ul>
+      <% @survey.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :company, '公司名称：' %>
+    <%= f.text_field :company %>
+  </div>
+  <div class="field">
+    <%= f.label :name, '姓　　名：' %>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :department, '部门职位：' %>
+    <%= f.text_field :department %>
+  </div>
+  <div class="field">
+    <%= f.label :phone, '电　　话：' %>
+    <%= f.text_field :phone %>
+  </div>
+  <div class="field">
+    <%= f.label :email, '邮　　件：' %>
+    <%= f.text_field :email %>
+  </div>
+    <br />
+  <div class="field">
+    <%= f.label :q1, 'Q1.贵单位的IT机房属于哪种类型:' %><br />
+    <%= radio_button_tag(:q1, "a") %>
+    <%= label_tag(:q1, "A.	企业自建") %>
+    <%= radio_button_tag(:q1, "b") %>
+    <%= label_tag(:q1, "B. 全部在IDC托管") %>
+    <%= radio_button_tag(:q1, "c") %>
+    <%= label_tag(:q1, "C. 部分在IDC托管") %>
+    <%= radio_button_tag(:q1, "d") %>
+    <%= label_tag(:q1, "D. 其它") %>
+  </div>
+  <div class="field">
+    <%= f.label :q2, 'Q2. 贵单位的服务器台数:' %><br />
+    <%= radio_button_tag(:q2, "a") %>
+    <%= label_tag(:q2, "A.	1 -10台") %>
+    <%= radio_button_tag(:q2, "b") %>
+    <%= label_tag(:q2, "B. 10-20台") %>
+    <%= radio_button_tag(:q2, "c") %>
+    <%= label_tag(:q2, "C. 20-50台") %>
+    <%= radio_button_tag(:q2, "d") %>
+    <%= label_tag(:q2, "D. 50台以上") %>
+  </div>
+  <div class="field">
+    <%= f.label :q3, 'Q3. 贵单位（近三年）信息化资金年均投入:' %><br />
+    <%= radio_button_tag(:q3, "a") %>
+    <%= label_tag(:q3, "A.	50万以内") %>
+    <%= radio_button_tag(:q3, "b") %>
+    <%= label_tag(:q3, "B. 50－100万") %>
+    <%= radio_button_tag(:q3, "c") %>
+    <%= label_tag(:q3, "C. 100万－300万  ") %>
+    <%= radio_button_tag(:q3, "d") %>
+    <%= label_tag(:q3, "D. 300万以上") %>
+  </div>
+  <div class="field">
+    <%= f.label :q4 ,'Q4. 贵单位目前IT运维人员有多少名:' %><br />
+    <%= radio_button_tag(:q4, "a") %>
+    <%= label_tag(:q4, "A.	10人以内 ") %>
+    <%= radio_button_tag(:q4, "b") %>
+    <%= label_tag(:q4, "B. 11－30人") %>
+    <%= radio_button_tag(:q4, "c") %>
+    <%= label_tag(:q4, "C. 31－70人") %>
+    <%= radio_button_tag(:q4, "d") %>
+    <%= label_tag(:q4, "D. 70人以上") %>
+  </div>
+  <div class="field">
+    <%= f.label :q5,'Q5. 贵单位的IT机房在使用过程中面临哪些问题:' %><br />
+        <%= radio_button_tag(:q5, "a") %>
+        <%= label_tag(:q5, "A. 电力容量不足或电力供应不稳定 ") %>
+        <%= radio_button_tag(:q5, "b") %>
+        <%= label_tag(:q5, "B. 制冷能力不足") %>
+        <%= radio_button_tag(:q5, "c") %>
+        <%= label_tag(:q5, "C. 地板承重不足") %>
+        <%= radio_button_tag(:q5, "d") %>
+        <%= label_tag(:q5, "D. 机房面积不足") %>
+        <%= radio_button_tag(:q5, "e") %>
+        <%= label_tag(:q5, "E. 机房层高不足") %>
+        <%= radio_button_tag(:q5, "f") %>
+        <%= label_tag(:q5, "F. 其它") %>
+  </div>
+  <div class="field">
+    <%= f.label :q6, 'Q6. 贵单位目前采用哪些灾备措施保证IT系统和数据的安全性:' %><br />
+    <%= radio_button_tag(:q6, "a") %>
+    <%= label_tag(:q6, "A.无任何措施 ") %>
+    <%= radio_button_tag(:q6, "b") %>
+    <%= label_tag(:q6, "B. 本地备份") %>
+    <%= radio_button_tag(:q6, "c") %>
+    <%= label_tag(:q6, "C. 磁带/介质异地保管") %>
+    <%= radio_button_tag(:q6, "d") %>
+    <%= label_tag(:q6, "D. 数据库数据远程复制") %>
+    <%= radio_button_tag(:q6, "e") %>
+    <%= label_tag(:q6, "E. CDP技术远程复制") %>
+    <%= radio_button_tag(:q6, "f") %>
+    <%= label_tag(:q6, "F. 其它") %>
+  </div>
+  <div class="field">
+    <%= f.label :q7, 'Q7.贵单位是否愿意将服务器、存储等设备或灾备系统托管在第三方数据中心:' %><br />
+    <%= radio_button_tag(:q7, "a") %>
+    <%= label_tag(:q7, "A. 是") %>
+    <%= radio_button_tag(:q7, "b") %>
+    <%= label_tag(:q7, "B. 否") %>
+  </div>
+  <div class="field">
+    <%= f.label :q8, 'Q8. 贵单位对GDS如下服务是否有需求:' %><br />
+    <%= radio_button_tag(:q8, "a") %>
+    <%= label_tag(:q8, "A.	场地托管服务") %>
+    <%= radio_button_tag(:q8, "b") %>
+    <%= label_tag(:q8, "B. 7*24小时IT系统实时监控服务") %>
+    <%= radio_button_tag(:q8, "c") %>
+    <%= label_tag(:q8, "C. 服务器/数据库运维服务外包") %>
+    <%= radio_button_tag(:q8, "d") %>
+    <%= label_tag(:q8, "D. 灾难备份系统实施及外包服务") %> <br />
+    <%= radio_button_tag(:q8, "e") %>
+    <%= label_tag(:q8, "E. 云计算") %>
+    <%= radio_button_tag(:q8, "f") %>
+    <%= label_tag(:q8, "F. 媒体存储及递送服务") %>
+    <%= radio_button_tag(:q8, "g") %>
+    <%= label_tag(:q8, "G. 无") %>
+    <%= radio_button_tag(:q8, "g") %>
+    <%= label_tag(:q8, "H.  您需要的其它服务") %>
+  </div>
+  <div class="field">
+    <%= f.label :q9, '（如果有需求）贵单位计划多长时间内实施该需求:' %><br />
+    <%= radio_button_tag(:q9, "a") %>
+    <%= label_tag(:q9, "A. 3个月内") %>
+    <%= radio_button_tag(:q9, "b") %>
+    <%= label_tag(:q9, "B. 3-6个月内") %>
+    <%= radio_button_tag(:q9, "c") %>
+    <%= label_tag(:q9, "C. 6-12个月内") %>
+    <%= radio_button_tag(:q9, "d") %>
+    <%= label_tag(:q9, "D.不确定") %>
+  </div>
+  <div class="field">
+    <%= f.label :q10, '（如果有云计算需求）贵单位会考虑哪些与云计算相关的服务:' %><br />
+    <%= radio_button_tag(:q10, "a") %>
+    <%= label_tag(:q10, "A. 软件及服务（SaaS）") %>
+    <%= radio_button_tag(:q10, "b") %>
+    <%= label_tag(:q10, "B. 基础架构及服务（IaaS）") %>
+    <%= radio_button_tag(:q10, "c") %>
+    <%= label_tag(:q10, "C. 平台及服务（PaaS）") %>
+    <%= radio_button_tag(:q10, "d") %>
+    <%= label_tag(:q10, "D.其它") %>
+  </div>
+  <div class="actions">
+    <%= f.submit "提交问卷" %>
+  </div>
+<% end %>

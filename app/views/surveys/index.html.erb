@@ -1,0 +1,51 @@
+<h1>Listing surveys</h1>
+
+<table>
+  <tr>
+    <th>Company</th>
+    <th>Name</th>
+    <th>Department</th>
+    <th>Phone</th>
+    <th>Email</th>
+    <th>Q1</th>
+    <th>Q2</th>
+    <th>Q3</th>
+    <th>Q4</th>
+    <th>Q5</th>
+    <th>Q6</th>
+    <th>Q7</th>
+    <th>Q8</th>
+    <th>Q9</th>
+    <th>Q10</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @surveys.each do |survey| %>
+  <tr>
+    <td><%= survey.company %></td>
+    <td><%= survey.name %></td>
+    <td><%= survey.department %></td>
+    <td><%= survey.phone %></td>
+    <td><%= survey.email %></td>
+    <td><%= survey.q1 %></td>
+    <td><%= survey.q2 %></td>
+    <td><%= survey.q3 %></td>
+    <td><%= survey.q4 %></td>
+    <td><%= survey.q5 %></td>
+    <td><%= survey.q6 %></td>
+    <td><%= survey.q7 %></td>
+    <td><%= survey.q8 %></td>
+    <td><%= survey.q9 %></td>
+    <td><%= survey.q10 %></td>
+    <td><%= link_to 'Show', survey %></td>
+    <td><%= link_to 'Edit', edit_survey_path(survey) %></td>
+    <td><%= link_to 'Destroy', survey, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Survey', new_survey_path %>
