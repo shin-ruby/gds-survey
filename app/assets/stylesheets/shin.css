@@ -1,0 +1,19 @@
+*{margin:0;padding:0;}
+body {
+    text-align: center;
+    background-color: #E6E6E6;
+
+}
+
+.warpper {
+    width: 920px;
+    margin: 0 auto;
+}
+
+#content {
+    width: 600px;
+    margin: 0 auto;
+    background-color: #FFFFFF;
+    padding: 20px;
+    text-align: left;
+}
